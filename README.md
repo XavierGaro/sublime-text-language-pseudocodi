@@ -2,9 +2,9 @@ Aquests fitxers afegeix el ressaltadordel llenguatge Pseudocodi empreat per la U
 
 
 Installació
-------
-En OS X
 ===
+En OS X
+---
 Copiar els fitxers Pseudocodi.tmLanguage i Miscellanoeus.tmPreferences a la carpeta:
 
     ~/Library/Application Support/Sublime Text 3/Packages/User
