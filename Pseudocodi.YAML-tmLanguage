@@ -1,0 +1,119 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+---
+name: Pseudocodi
+scopeName: source.pseudocodi
+fileTypes: [pseudocodi]
+uuid: 0da65be4-5aac-4b6f-8071-1aadb970b8d9
+
+patterns:
+- comment: Comentaris
+  name: comment.line.note.pseudocode
+  match: (?<!=\s)((\{).*(\}))
+
+- comment: Paraules clau de control
+  name: keyword.control.pseudocode
+  match: \b(per|fper|mentre|fmentre|si|fsi|llavors|sino|fins|fer|pas)\b
+
+- comment: Altres paraules clau
+  name: keyword.other.pseudocode
+  match: \b(const|fconst|tipus|ftipus|var|fvar|de|retorna)\b
+
+- comment: Tipus modificadors
+  name: storage.modifier.pseudocode
+  match: \b(ent|sor|entsor)\b
+
+- comment: Tipus predefinits
+  name: storage.type.pseudocode
+  match: \b(enter|real|caracter|boolea|taula|tupla)\b
+
+
+- comment: Accés als elements d'una tupla
+  name: entity.other.attribute-name
+  match: (\.)([A-Za-z_][A-Za-z0-9_]*)
+  captures:
+    '1': {name: keyword.other.pseudocodi}
+    '2': {name: entity.other.attribute-name}
+
+- comment: Constants numériques
+  name: constant.numeric.pseudocode
+  match: -?\b\d+(.\d+E?\d)?\b
+
+- comment: Constants predefinides
+  name: constant.other.pseudocode
+  match: \b(ENTERMAX|ENTERMIN|REALMAX|REALMIN)\b
+
+- comment: Constants del llenguatges
+  name: constant.language.pseudocode
+  match: \b(cert|fals)\b
+
+- comment: Operador i
+  name: keyword.operator.pseudocodi
+  match: \b(i)\b(?=\s[\w\d]+)
+
+- comment: Altres operadors alfanumérics
+  name: keyword.operator.pseudocodi
+  match: \b(o|no|div|mod)\b
+
+- comment: Altres operadors simbols
+  name: keyword.operator.pseudocodi
+  match: =|=/|:=|<|<=|>|>=|\*|/|\+|-|:|;|≤|\.|,
+
+- comment: Funcions
+  name: storage.type.function.pseudocode
+  match: (\bfuncio\b(\s[A-Za-z_][A-Za-z0-9_]*)(?=\(.*\):\s.+))|\bffuncio\b
+  captures:
+    '1': {name: storage.type.function.pseudocode}
+    '2': {name: entity.name.class}
+
+- comment: Crida a accions i funcions predefinides
+  name: support.function.pseudocodi
+  match: \b(realAEnter|enterAReal|caracterACodi|codiACaracter|llegirEnter|llegirReal|llegirCaracter|escriureEnter|escriureReal|escriureCaracter|)\b(?=\(.*\))
+  captures:
+    '1': {name: support.function.pseudocodi}
+
+- comment: Crida a funcions i accions
+  name: storage.type.function.pseudocode
+  match: ([A-Za-z_][A-Za-z0-9_]*)(?=\(.*\))
+  captures:
+    '1': {name: storage.type.function}
+
+- comment: Accions
+  name: storage.type.function.pseudocode
+  match: (\baccio\b(\s[A-Za-z_][A-Za-z0-9_]*)(?=\(.*\)))|\bfaccio\b
+  captures:
+    '1': {name: storage.type.function.pseudocode}
+    '2': {name: entity.name.class}
+
+- comment: Cometes simples
+  name: string.quoted.single.pseudocode
+  begin: (')
+  beginCaptures:
+    '1': {name: punctuation.definition.string.begin.pseudocode}
+  end: (')
+  endCaptures:
+    '1': {name: punctuation.definition.string.end.pseudocode}
+
+- comment: Cometes dobles
+  name: string.quoted.single.pseudocode
+  begin: (")
+  beginCaptures:
+    '1': {name: punctuation.definition.string.begin.pseudocode}
+  end: (")
+  endCaptures:
+    '1': {name: punctuation.definition.string.end.pseudocode}
+
+- comment: Ambit del algorisme
+  name: meta.algorisme.pseudocode
+  begin: ^\s*\b(algorisme)\b\s([A-Za-z][A-Za-z0-0_]*)
+  beginCaptures:
+    '1': {name: storage.type.algorisme.pseudocode}
+    '2': {name: entity.name.class}
+  end: (falgorisme)
+  endCaptures:
+    '1': {name: storage.type.algorisme.pseudocode}
+  patterns:
+  - include: $self
+  - contentName: entity.name.function.pseudocode
+    begin: (?=[A-Za-z_][A-Za-z0-9_]*)
+    end: (?![A-Za-z0-9_])
+...
