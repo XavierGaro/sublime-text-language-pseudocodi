@@ -46,7 +46,7 @@
 			<key>comment</key>
 			<string>Tipus predefinits</string>
 			<key>match</key>
-			<string>\b(enter|real|caracter|boolea|taula|tupla)\b</string>
+			<string>\b(enter|real|caracter|boolea|taula|tupla|ftupla)\b</string>
 			<key>name</key>
 			<string>storage.type.pseudocode</string>
 		</dict>

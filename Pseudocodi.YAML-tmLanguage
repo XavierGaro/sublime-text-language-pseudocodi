@@ -24,7 +24,7 @@ patterns:
 
 - comment: Tipus predefinits
   name: storage.type.pseudocode
-  match: \b(enter|real|caracter|boolea|taula|tupla)\b
+  match: \b(enter|real|caracter|boolea|taula|tupla|ftupla)\b
 
 
 - comment: Accés als elements d'una tupla
