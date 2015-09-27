@@ -60,7 +60,7 @@ patterns:
 
 - comment: Funcions
   name: storage.type.function.pseudocode
-  match: (\bfuncio\b(\s[A-Za-z_][A-Za-z0-9_]*)(?=\(.*\):\s.+))|\bffuncio\b
+  match: (\bfuncio\b(\s[A-Za-z_][A-Za-z0-9_]*)(?=\(.*\)\s*:\s*.+))|\bffuncio\b
   captures:
     '1': {name: storage.type.function.pseudocode}
     '2': {name: entity.name.class}

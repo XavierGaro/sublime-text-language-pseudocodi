@@ -136,7 +136,7 @@
 			<key>comment</key>
 			<string>Funcions</string>
 			<key>match</key>
-			<string>(\bfuncio\b(\s[A-Za-z_][A-Za-z0-9_]*)(?=\(.*\):\s.+))|\bffuncio\b</string>
+			<string>(\bfuncio\b(\s[A-Za-z_][A-Za-z0-9_]*)(?=\(.*\)\s*:\s*.+))|\bffuncio\b</string>
 			<key>name</key>
 			<string>storage.type.function.pseudocode</string>
 		</dict>
