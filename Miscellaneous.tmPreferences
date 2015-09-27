@@ -9,9 +9,9 @@
 	<key>settings</key>
 	<dict>
 		<key>decreaseIndentPattern</key>
-		<string>^\s*(falgorisme|fvar|fconst|ftipus|fmentre|fper|retorna|fif|faccio|ftupla)\b.*</string>
+		<string>^\s*(falgorisme|fvar|fconst|ftipus|fmentre|fper|fsi|ffuncio|faccio|ftupla|sino)\b.*</string>
 		<key>increaseIndentPattern</key>
-		<string>(^\s*(algorisme|var|const|tipus|mentre|per|funcio|if|accio)\b.*\s*$)|^.+(\btupla)$</string>
+		<string>(^\s*(algorisme|var|const|tipus|mentre|per|funcio|si|accio|sino)\b.*\s*$)|^.+(\btupla)$</string>
 		<key>disableIndentNextLinePattern</key>
 		<string></string>
 	</dict>
