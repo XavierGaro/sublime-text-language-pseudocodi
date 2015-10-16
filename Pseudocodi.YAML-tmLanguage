@@ -16,7 +16,7 @@ patterns:
 
 - comment: Altres paraules clau
   name: keyword.other.pseudocode
-  match: \b(const|fconst|tipus|ftipus|var|fvar|de|retorna)\b
+  match: \b(const|fconst|tipus|ftipus|var|fvar|de|retorna|punter a)\b
 
 - comment: Tipus modificadors
   name: storage.modifier.pseudocode
@@ -25,7 +25,6 @@ patterns:
 - comment: Tipus predefinits
   name: storage.type.pseudocode
   match: \b(enter|real|caracter|boolea|taula|tupla|ftupla)\b
-
 
 - comment: Accés als elements d'una tupla
   name: entity.other.attribute-name
@@ -44,7 +43,7 @@ patterns:
 
 - comment: Constants del llenguatges
   name: constant.language.pseudocode
-  match: \b(cert|fals)\b
+  match: \b(cert|fals|NUL)\b
 
 - comment: Operador i
   name: keyword.operator.pseudocodi
@@ -56,7 +55,7 @@ patterns:
 
 - comment: Altres operadors simbols
   name: keyword.operator.pseudocodi
-  match: =|=/|:=|<|<=|>|>=|\*|/|\+|-|:|;|≤|\.|,
+  match: =|=/|:=|<|<=|>|>=|\*|/|\+|-|:|;|≤|\.|^|,
 
 - comment: Funcions
   name: storage.type.function.pseudocode
